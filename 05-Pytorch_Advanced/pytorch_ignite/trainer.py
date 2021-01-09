@@ -96,7 +96,7 @@ class MyEngine(Engine):
 
     @staticmethod
     def attach(train_engine, validation_engine, verbose=VERBOSE_BATCH_WISE):
-        # Attaching would be repaeted for serveral metrics.
+        # Attaching would be repeated for several metrics.
         # Thus, we can reduce the repeated codes by using this function.
         def attach_running_average(engine, metric_name):
             RunningAverage(output_transform=lambda x: x[metric_name]).attach(
